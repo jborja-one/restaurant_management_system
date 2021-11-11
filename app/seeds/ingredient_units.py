@@ -54,6 +54,8 @@ def seed_ingredient_units():
     db.session.add(gallon)
     db.session.add(unit)
 
+    db.session.commit()
+
 
 def undo_ingredient_units():
     db.session.execute('TRUNCATE ingredient_units RESTART IDENTITY CASCADE;')

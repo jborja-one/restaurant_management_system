@@ -14,10 +14,10 @@ seed_commands = AppGroup('seed')
 @seed_commands.command('all')
 def seed():
     seed_users()
-    seed_menu_items()
     seed_menu_categories()
     seed_ingredient_units()
     seed_menu_item_ingredients()
+    seed_menu_items()
     # Add other seed functions here
 
 
@@ -25,8 +25,8 @@ def seed():
 @seed_commands.command('undo')
 def undo():
     undo_users()
-    undo_menu_items()
     undo_menu_categories()
     undo_ingredient_units()
     undo_menu_item_ingredients()
+    undo_menu_items()
     # Add other undo functions here

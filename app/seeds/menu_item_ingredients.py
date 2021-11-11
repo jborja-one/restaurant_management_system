@@ -37,13 +37,13 @@ def seed_menu_item_ingredients():
         ingredient_qty=1.5,
         menu_item_id=1,
     )
-    potatoes = MenuItemIngredients(
-        id=6,
-        ingredient_name='Potato',
-        ingredient_unit=6,
-        ingredient_qty=2,
-        menu_item_id=2,
-    )
+    # potatoes = MenuItemIngredients(
+    #     id=6,
+    #     ingredient_name='Potato',
+    #     ingredient_unit=6,
+    #     ingredient_qty=2,
+    #     menu_item_id=2,
+    # )
     hotdog = MenuItemIngredients(
         id=7,
         ingredient_name='Hot Dog',
@@ -57,7 +57,7 @@ def seed_menu_item_ingredients():
     db.session.add(lettuce)
     db.session.add(tomato)
     db.session.add(salt)
-    db.session.add(potatoes)
+    # db.session.add(potatoes)
     db.session.add(hotdog)
 
     db.session.commit()
