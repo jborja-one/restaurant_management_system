@@ -4,4 +4,4 @@ from .menu_category import MenuCategory
 from .menu_item import MenuItem
 from .menu_item_ingredients import MenuItemIngredients
 from .ingredient_unit import IngredientUnit
-from .ingredient_list import IngredientList
+# from .ingredient_list import IngredientList
