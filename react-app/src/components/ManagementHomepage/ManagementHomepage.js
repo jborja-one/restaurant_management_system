@@ -44,9 +44,11 @@ const ManagementHomepage = () => {
 
 	return (
 		<Container className='container '>
-			<Typography variant='h3' className='title'>
-				Main Menu
-			</Typography>
+			<Container>
+				<Typography variant='h3' className='title'>
+					Main Menu
+				</Typography>
+			</Container>
 			<Grid container spacing={4} className='grid'>
 				<Paper className='paper' elevation={12}>
 					Menu

@@ -5,13 +5,16 @@ class MenuItemIngredients(db.Model):
     __tablename__ = 'menu_item_ingredients'
 
     id = db.Column(db.Integer, primary_key=True)
-    ingredient_name = db.Column(db.String(100), nullable=False)
+    ingredient_name_id = db.Column(db.Integer, db.ForeignKey(
+        'ingredient_lists.id'), nullable=False)
     ingredient_unit = db.Column(db.Integer, db.ForeignKey(
         'ingredient_units.id'), nullable=False)
     ingredient_qty = db.Column(db.Integer, nullable=False)
     menu_item_id = db.Column(db.Integer, nullable=False)
 
     # todo Associations here
+    ind_ingredient = db.relationship(
+        'IngredientList', back_populates='ingredient_list')
     menu_item = db.relationship(
         'MenuItem', back_populates='item_ingredients')
     ingredient_unit_id = db.relationship(
