@@ -32,7 +32,7 @@ def upgrade():
                     )
     op.create_table('menu_item_ingredients',
                     sa.Column('id', sa.Integer(), nullable=False),
-                    sa.Column('ingredient_name_id', sa.String(
+                    sa.Column('ingredient_name', sa.String(
                         length=100), nullable=False),
                     sa.Column('ingredient_unit', sa.Integer(), nullable=False),
                     sa.Column('ingredient_qty', sa.Integer(), nullable=False),
