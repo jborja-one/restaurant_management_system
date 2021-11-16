@@ -15,5 +15,5 @@ class MenuCategory(db.Model):
         return {
             'id': self.id,
             'category_name': self.category_name,
-            'menu_item_id': self.menu_item_id
+            # 'menu_item_id': self.menu_item_id
         }
