@@ -2,10 +2,12 @@ import React from 'react';
 import {
 	autocompleteClasses,
 	Container,
+	Link,
 	Grid,
 	Paper,
 	Typography,
 } from '@mui/material';
+// import { Link } from 'react-router-dom';
 import './ManagementHomepage.css';
 import { makeStyles } from '@material-ui/styles';
 
@@ -50,9 +52,11 @@ const ManagementHomepage = () => {
 				</Typography>
 			</Container>
 			<Grid container spacing={4} className='grid'>
-				<Paper className='paper' elevation={12}>
-					Menu
-				</Paper>
+				<Link href='/menu'>
+					<Paper className='paper' elevation={12}>
+						Menu
+					</Paper>
+				</Link>
 				<Paper className='paper' elevation={12}>
 					Inventory
 				</Paper>

@@ -25,6 +25,6 @@ class MenuItem(db.Model):
             'item_name': self.item_name,
             'item_cost': self.item_cost,
             'item_price': self.item_price,
-            'item_category_id': self.item_category_id,
-            'item_ingredients_id': self.item_ingredients_id
+            'menu_category_id': self.menu_category_id,
+            'menu_item_ingredients_id': self.menu_item_ingredients_id
         }

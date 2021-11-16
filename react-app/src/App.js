@@ -9,6 +9,7 @@ import UsersList from './components/UsersList';
 import User from './components/User';
 import ManagementHomepage from './components/ManagementHomepage/ManagementHomepage';
 import { authenticate } from './store/session';
+import MenuItems from './components/MenuItems/MenuItems';
 
 function App() {
 	const [loaded, setLoaded] = useState(false);
@@ -43,6 +44,9 @@ function App() {
 				</ProtectedRoute>
 				<ProtectedRoute path='/' exact={true}>
 					<ManagementHomepage />
+				</ProtectedRoute>
+				<ProtectedRoute path='/menu' exact={true}>
+					<MenuItems />
 				</ProtectedRoute>
 			</Switch>
 		</BrowserRouter>

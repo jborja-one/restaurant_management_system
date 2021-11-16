@@ -33,6 +33,8 @@ const LoginForm = () => {
 	const [errors, setErrors] = useState([]);
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	// const [emailError, setEmailError] = useState(false);
+	// const [passwordError, setPasswordError] = useState(false);
 	const user = useSelector((state) => state.session.user);
 	const dispatch = useDispatch();
 
@@ -46,6 +48,9 @@ const LoginForm = () => {
 		}
 	};
 
+	// setEmailError(false);
+	// setPasswordError(false);
+
 	const updateEmail = (e) => {
 		setEmail(e.target.value);
 	};
@@ -57,6 +62,13 @@ const LoginForm = () => {
 	if (user) {
 		return <Redirect to='/' />;
 	}
+
+	// if (email == '') {
+	// 	setEmailError(true);
+	// }
+	// if (password == '') {
+	// 	setPasswordError(true);
+	// }
 
 	return (
 		<Container className={classes.container} component='div'>
@@ -81,6 +93,7 @@ const LoginForm = () => {
 					value={email}
 					color='secondary'
 					required
+					// error={emailError}
 				/>
 				<br />
 				<TextField
@@ -92,6 +105,7 @@ const LoginForm = () => {
 					type='password'
 					color='secondary'
 					required
+					// error={passwordError}
 				/>
 				<br />
 				<Button
